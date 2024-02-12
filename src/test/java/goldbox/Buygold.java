@@ -65,9 +65,6 @@ public class Buygold {
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[.='Understood'])[2]")));
 		element.click();
 	
-		
-		
-		
 		Thread.sleep(5000);
 		//Edit button
 		driver.findElement(By.xpath("//button[@class='btn-sm btn-edit mr-2'][1]")).click();

@@ -5,16 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginpageUP {
+public class loginPage {
 	
-	//Rule-1: Finding Elements by using @ FindBy annotations
+	//USER PANNEL SIGN IN 
+	
+	//Rule-1: Finding Element by using @ FindBy Annotations
 	
 	@FindBy(xpath="//input[@placeholder='Enter Mobile Number']") private WebElement MobileNumberEdt;
-	@FindBy(xpath="//button[.='Continue']") private WebElement Continueclick;
+	@FindBy(xpath="//button[.='Continue']") private WebElement ContinueBtn;
 	
 	//Rule-2:Create a constructor to initilise these elements
 	
-	public loginpageUP (WebDriver driver)
+	public loginPage (WebDriver driver)
 	{
 	   PageFactory.initElements (driver, this);
 	}
@@ -25,12 +27,15 @@ public class loginpageUP {
 		return MobileNumberEdt;
 	}
 
-	public WebElement getContinueclick() {
-		return Continueclick;
+	public WebElement getContinueBtn() {
+		return ContinueBtn;
 	}
 	
 	//Rule-4:Create Business Libraries
-	
-	
-}
+	public void loginToApplication () {
+		
+		MobileNumberEdt.sendKeys();
+		ContinueBtn.click();
+	}
 
+}

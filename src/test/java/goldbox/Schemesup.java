@@ -90,7 +90,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			
 			Thread.sleep(3000);
 			
-			driver.findElement(By.xpath("(//label[.='Phone Number'])[2]")).sendKeys("6309631698   ");
+			driver.findElement(By.xpath("(//label[text()='Phone Number'])[2]")).sendKeys("6309631698",Keys.ENTER);
 			
 			Thread.sleep(3000);
 			
@@ -138,39 +138,4 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			
 		}
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
